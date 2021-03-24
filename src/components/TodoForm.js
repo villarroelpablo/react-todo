@@ -21,10 +21,14 @@ function TodoForm(props) {
 
     }
 
+    function handleSubmit(e) {
+        alert('submited')
+    }
+
     return (
         <form>
-            <input type="text" onChange={handleChange} value={state.inputText} placeholder="Add something..." required/>
-            <button type="button" onClick={handleClick}>Submit</button>
+            <input type="text" onSubmit={handleSubmit} onChange={handleChange} value={state.inputText} placeholder="Add something..."/>
+            <button type="button" onClick={handleClick}>Add</button>
         </form>
     )
 }

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 
 function Todo(props) {
 
@@ -8,7 +8,7 @@ function Todo(props) {
 
     return (    
         <div style={styleDiv}>
-            <p>{props.id}{props.text}</p>
+            <p>Id:{props.id} ---- {props.text}</p>
             <button>x</button>
         </div>
     )

@@ -5,15 +5,24 @@ import TodoList from './components/TodoList'
 function App() {
 
     const [state, setState] = useState({
-        todos: [{id: 0, text: 'hola mundo'}],
-        currentId: 1,
+        todos: [],
+        currentId: 0,
     })
 
     const handleClick = todoText => {
-        const obj = {id: state.currentId, text: todoText}
+        const obj = {
+            text: todoText,
+            id: state.currentId
+        }
         let a = state.todos
         a.unshift(obj)
-        setState({todosText: a})
+
+        setState({
+            todos: a,
+            currentId: state.currentId + 1
+        })
+
+        console.log(state.todos)
     }
 
 
