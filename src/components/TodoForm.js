@@ -21,14 +21,16 @@ function TodoForm(props) {
 
     }
 
-    function handleSubmit(e) {
-        alert('submited')
+    const handleSubmit = e => {
+        e.preventDefault()
+        handleClick()
     }
 
     return (
-        <form>
-            <input type="text" onSubmit={handleSubmit} onChange={handleChange} value={state.inputText} placeholder="Add something..."/>
-            <button type="button" onClick={handleClick}>Add</button>
+        <form onSubmit={handleSubmit} className="form-container">
+            <input type="text" onChange={handleChange} value={state.inputText} placeholder="Add a todo..."/>
+            <button type="button" size="" onClick={handleClick}>Add</button>
+            <button type="button" size="" onClick={props.handleClear}>Clear</button>
         </form>
     )
 }

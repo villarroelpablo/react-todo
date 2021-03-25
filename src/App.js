@@ -1,6 +1,7 @@
 import React, {useState}  from 'react'
 import TodoForm from './components/TodoForm'
 import TodoList from './components/TodoList'
+import './App.css'
 
 function App() {
 
@@ -21,16 +22,18 @@ function App() {
             todos: a,
             currentId: state.currentId + 1
         })
+    }
 
-        console.log(state.todos)
+    const handleClear = () => {
+        setState({currentId: 0, todos: []})
     }
 
 
     return (
-        <div>
-            TODO APP
-            <TodoForm handleClick={handleClick}/>
-            <TodoList todos={state.todos}/>
+        <div className="main-container">
+            <h1>React Todo</h1>
+            <TodoForm handleClick={handleClick} handleClear={handleClear}/>
+            <TodoList todos={state} setTodos={setState}/>
         </div>
     )
 }

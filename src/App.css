@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+
+body {
+  background: rgb(204, 168, 210);
+  background: linear-gradient(
+    90deg,
+    rgba(204, 168, 210, 1) 0%,
+    rgba(204, 118, 214, 1) 100%
+  );
+  font-family: "Roboto", sans-serif;
+}
+
+.main-container h1 {
+  font-size: 70px;
+}
+
+.main-container {
+  text-align: center;
+}
+
+.form-container input {
+    width: 300px;
+    height: 35px;
+    font-size: 20px;
+    border: solid #D8B8DF;
+    border-radius: 5px;
+    
+}
+
+input:focus {
+    outline: none !important;
+    border: solid #a224be ;
+}
+
+.form-container button {
+    width: 70px;
+    height: 42px;
+    font-size: 20px;
+    margin-left: 3px;
+    border: solid #D8B8DF;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.form-container button:focus {
+    outline: none !important;
+}
+
+.form-container button:active {
+    border: solid #a224be;
+    transform: scale(1.5);
+}
+
+.list-container {
+    background-color: transparent;
+    padding: 2px;
+    text-align: center;
+    width: 500px;
+    margin: auto;
+}
+
+.todo {
+    background-color: white;
+    display: flex;
+    margin: 10px;
+    border: solid #a224be;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.todo p{
+    text-align: justify;
+    font-size: 25px;
+    padding: 0px;
+    width: 400px;
+    margin: auto;
+    word-wrap: break-word;
+}
+
+.todo button {
+    width: 70px;
+    height: 42px;
+    font-size: 20px;
+    margin-left: 3px;
+    border: solid #D8B8DF;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.todo input {
+    transform: scale(1.2);
+    margin: auto 5px auto auto;
+}
